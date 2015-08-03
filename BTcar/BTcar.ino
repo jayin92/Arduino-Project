@@ -1,3 +1,9 @@
+/*
+This Project use Arduino Mega 2560, L298N motor driver and HC-04 Blue tooth
+
+p.s. My English is poor
+*/
+
 #include <SoftwareSerial.h>
 #include <dht11.h>
 SoftwareSerial BT (12, 11);
