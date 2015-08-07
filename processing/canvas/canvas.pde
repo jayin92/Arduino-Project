@@ -45,9 +45,9 @@ void draw(){
   println(""); 
   textFont(f);
   fill(127);
-  text(("Red:" + R),20,15);
-  text(("Green:" + G),20,30);
-  text(("Blue:" + B),20,45);
+  //text(("Red:" + R),20,15);
+  //text(("Green:" + G),20,30);
+  //text(("Blue:" + B),20,45);
   
   if(mousePressed && (mouseButton == LEFT) && mode == '1'){
     noStroke();
