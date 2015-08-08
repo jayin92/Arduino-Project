@@ -1,5 +1,5 @@
 /*
-This Project use Arduino Mega 2560, L298N motor driver and HC-04 Blue tooth
+This Project use Arduino Mega 2560, L298N motor driver and HC-04 Bluetooth
 
 p.s. My English is poor
 */

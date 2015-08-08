@@ -1,38 +1,14 @@
 /*
- Arduino --> ThingSpeak Channel via Ethernet
+ ******
+ Arduino Project
+ Name:DHT11 and IoT(Internet of thing)
+ ******
+ Use Arduino Uno and Arduino Ethernet Shieid
 
- The ThingSpeak Client sketch is designed for the Arduino and Ethernet.
- This sketch updates a channel feed with an analog input reading via the
- ThingSpeak API (https://thingspeak.com/docs)
- using HTTP POST. The Arduino uses DHCP and DNS for a simpler network setup.
- The sketch also includes a Watchdog / Reset function to make sure the
- Arduino stays connected and/or regains connectivity after a network outage.
- Use the Serial Monitor on the Arduino IDE to see verbose network feedback
- and ThingSpeak connectivity status.
+ Upload Location : thingspeak.com and dht11.ddns.net 
 
- Getting Started with ThingSpeak:
-
-   * Sign Up for New User Account - https://thingspeak.com/users/new
-   * Create a new Channel by selecting Channels and then Create New Channel
-   * Enter the Write API Key in this sketch under "ThingSpeak Settings"
-
- Arduino Requirements:
-
-   * Arduino with Ethernet Shield or Arduino Ethernet
-   * Arduino 1.0+ IDE
-
-  Network Requirements:
-   * Ethernet port on Router
-   * DHCP enabled on Router
-   * Unique MAC Address for Arduino
-
- Created: October 17, 2011 by Hans Scharler (http://www.nothans.com)
-
- Additional Credits:
- Example sketches from Arduino team, Ethernet by Adrian McEwen
-
-*/
-
+ p.s. My English is poor
+ */
 #include <SPI.h>
 #include <Ethernet.h>
 #include <dht.h>
