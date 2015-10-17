@@ -26,7 +26,7 @@ while(1):
                 AGE = input("請輸入新員工年齡 =>")
                 age.append(AGE)
                 print("   ")                
-                print("已加入"+name+"員工"+"年齡:"+AGE)
+                print("已加入"+name+"員工"+" "+"年齡:"+AGE)
                 file = open('ListMember.txt', 'w', encoding = 'UTF-8')
                 file.truncate() 
                 for item in member:
@@ -38,17 +38,16 @@ while(1):
                         fileAGE.write("%s\n" % item)
                 fileAGE.close()
         if mode == '3':
-                print("員工名單:")
+                print("員工名單及年齡:")
                 member = [line.rstrip('\n') for line in open('ListMember.txt')]
                 age = [line.rstrip('\n') for line in open('MemberAge.txt')]
-                print(member)                
+                print(member)
+                print(age)
                 RE = input("請輸入你想要刪除的員工姓名 =>")
-                x = int(member.index(RE))
-                print(x)
-                os.system('pause')
+                x = member.index(RE)
+                AGE = age[x]
                 member.remove(RE)
-                age.pop([int(x)])
-                print(member)                
+                age.pop(x)
                 file = open('ListMember.txt', 'w', encoding = 'UTF-8')
                 for item in member:
                         file.write("%s\n" % item)
@@ -58,7 +57,7 @@ while(1):
                 for item in age:
                         fileAGE.write("%s\n" % item)
                 fileAGE.close()
-                print(RE+"員工已刪除")
+                print(RE+"員工已刪除"+" "+"年齡"+AGE)                
         if mode == "exit":                
                 Exit=input("你確定要離開嗎?(Y or N)")
                 if Exit == 'Y':
