@@ -1,6 +1,10 @@
+import os
+import msvcrt as m
+
 member = [line.rstrip('\n') for line in open('ListMember.txt')]
 age = [line.rstrip('\n') for line in open('MemberAge.txt')]
 while(1):
+        os.system('cls')  
         member = [line.rstrip('\n') for line in open('ListMember.txt')]
         age = [line.rstrip('\n') for line in open('MemberAge.txt')]
         print("                            瑞領公司員工名冊系統\n")
@@ -36,14 +40,24 @@ while(1):
         if mode == '3':
                 print("員工名單:")
                 member = [line.rstrip('\n') for line in open('ListMember.txt')]
-                print(member)
+                age = [line.rstrip('\n') for line in open('MemberAge.txt')]
+                print(member)                
                 RE = input("請輸入你想要刪除的員工姓名 =>")
+                x = int(member.index(RE))
+                print(x)
+                os.system('pause')
                 member.remove(RE)
+                age.pop([int(x)])
                 print(member)                
                 file = open('ListMember.txt', 'w', encoding = 'UTF-8')
                 for item in member:
                         file.write("%s\n" % item)
                 file.close()
+                fileAGE = open('MemberAge.txt', 'w', encoding = 'UTF-8')
+                fileAGE.truncate()
+                for item in age:
+                        fileAGE.write("%s\n" % item)
+                fileAGE.close()
                 print(RE+"員工已刪除")
         if mode == "exit":                
                 Exit=input("你確定要離開嗎?(Y or N)")
@@ -69,13 +83,25 @@ while(1):
                    fileAGE.truncate()
                    fileAGE.close()
                 print("已刪除所有員工的資料")
+                
         if mode == "about":
                 print("This is made by Jay Li in May 28, 2015. I'm glad you download this stupid software")
         if mode == "help":
                 print("模式介紹:")
                 print("save 為儲存資料到電腦裡")
                 print("exit 為離開本程式")
-                print("clear 為清除所有員工的資料")
+                print("clear 為清除所有員工的資料\n")                
+                print("如何使用這個程式:")
+                print("如果員工姓名為Jay,年齡為12,表示方法如下:")
+                print("目前員工有:")
+                print("['Jay']")
+                print("年齡:")
+                print("['12']")
+        print("   ")        
+        os.system('pause')
+       
+                
+                      
               
                 
                 
