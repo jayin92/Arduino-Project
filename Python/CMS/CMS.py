@@ -1,27 +1,38 @@
 member = [line.rstrip('\n') for line in open('ListMember.txt')]
+age = [line.rstrip('\n') for line in open('MemberAge.txt')]
 while(1):
         member = [line.rstrip('\n') for line in open('ListMember.txt')]
+        age = [line.rstrip('\n') for line in open('MemberAge.txt')]
         print("                            瑞領公司員工名冊系統\n")
         print("請選擇功能:")
         print("1.查詢現有員工")        
         print("2.增加新員工")
         print("3.刪除員工")        
         print("如需要更多模式介紹請打help,謝謝\n")
-        mode = input("請輸入模式 =>")
         
+        mode = input("請輸入模式 =>")        
         if mode == '1':
                 print("目前的員工有:")                
                 print(member)                
+                print('年齡:')
+                print(age)
         if mode == '2':		
                 name = input("請輸入新員工姓名 =>")
-                member.append(name) 
-                print("   ")
-                print("已加入"+name+"員工")
+                member.append(name)
+                AGE = input("請輸入新員工年齡 =>")
+                age.append(AGE)
+                print("   ")                
+                print("已加入"+name+"員工"+"年齡:"+AGE)
                 file = open('ListMember.txt', 'w', encoding = 'UTF-8')
                 file.truncate() 
                 for item in member:
                         file.write("%s\n" % item)
                 file.close()
+                fileAGE = open('MemberAge.txt', 'w', encoding = 'UTF-8')
+                fileAGE.truncate()
+                for item in age:
+                        fileAGE.write("%s\n" % item)
+                fileAGE.close()
         if mode == '3':
                 print("員工名單:")
                 member = [line.rstrip('\n') for line in open('ListMember.txt')]
@@ -54,6 +65,9 @@ while(1):
                    file = open('ListMember.txt','w', encoding = 'UTF-8')
                    file.truncate()
                    file.close()
+                   flieAGE = open('MemberAge.txt', 'w', encoding = 'UTF-8')
+                   fileAGE.truncate()
+                   fileAGE.close()
                 print("已刪除所有員工的資料")
         if mode == "about":
                 print("This is made by Jay Li in May 28, 2015. I'm glad you download this stupid software")
@@ -62,3 +76,7 @@ while(1):
                 print("save 為儲存資料到電腦裡")
                 print("exit 為離開本程式")
                 print("clear 為清除所有員工的資料")
+              
+                
+                
+                      
