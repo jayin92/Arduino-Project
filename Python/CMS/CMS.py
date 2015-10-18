@@ -3,11 +3,13 @@ import msvcrt as m
 
 member = [line.rstrip('\n') for line in open('ListMember.txt')]
 age = [line.rstrip('\n') for line in open('MemberAge.txt')]
+
+NAME = "名冊系統"
 while(1):
         os.system('cls')  
         member = [line.rstrip('\n') for line in open('ListMember.txt')]
         age = [line.rstrip('\n') for line in open('MemberAge.txt')]
-        print("                            瑞領公司員工名冊系統\n")
+        print(NAME.center(70," "))
         print("請選擇功能:")
         print("1.查詢現有員工")        
         print("2.增加新員工")
@@ -73,7 +75,7 @@ while(1):
                 print("員工資料已儲存")
                 file.close()
         if mode == "clear":
-                CO = input("確定要刪除所有員工的資料嗎?(Y表示確定)=>")
+                CO = input("確定要刪除所有員工的資料嗎?(y表示確定)=>")
                 if CO == 'Y':
                    file = open('ListMember.txt','w', encoding = 'UTF-8')
                    file.truncate()
