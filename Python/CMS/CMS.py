@@ -1,10 +1,12 @@
 import os
 import msvcrt as m
 
+os.system('color A')
+
 member = [line.rstrip('\n') for line in open('ListMember.txt')]
 age = [line.rstrip('\n') for line in open('MemberAge.txt')]
 
-NAME = "名冊系統"
+NAME = "員工名冊系統"
 while(1):
         os.system('cls')  
         member = [line.rstrip('\n') for line in open('ListMember.txt')]
@@ -18,10 +20,16 @@ while(1):
         
         mode = input("請輸入模式 =>")        
         if mode == '1':
-                print("目前的員工有:")                
-                print(member)                
-                print('年齡:')
-                print(age)
+                #print("目前的員工有:")                
+                #print(member)                
+                #print('年齡:')
+                #print(age)
+                for item in member:
+                        x = 0
+                        print('員工姓名:'+member[x])
+                        print('年齡:'+age[x])
+                        print('')
+                        x = x+1                
         if mode == '2':		
                 name = input("請輸入新員工姓名 =>")
                 member.append(name)
@@ -40,11 +48,15 @@ while(1):
                         fileAGE.write("%s\n" % item)
                 fileAGE.close()
         if mode == '3':
-                print("員工名單及年齡:")
+                print("員工名單及年齡:"+'\n')
                 member = [line.rstrip('\n') for line in open('ListMember.txt')]
                 age = [line.rstrip('\n') for line in open('MemberAge.txt')]
-                print(member)
-                print(age)
+                for item in member:
+                        x = 0
+                        print('員工姓名:'+member[x])
+                        print('年齡:'+age[x])
+                        print('')
+                        x = x+1
                 RE = input("請輸入你想要刪除的員工姓名 =>")
                 x = member.index(RE)
                 AGE = age[x]
@@ -97,7 +109,8 @@ while(1):
                 print("目前員工有:")
                 print("['Jay']")
                 print("年齡:")
-                print("['12']")
+                print("['12']")      
+                
         print("   ")        
         os.system('pause')
        
