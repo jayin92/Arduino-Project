@@ -1,13 +1,16 @@
 import os
 import msvcrt as m
 
-os.system('color A')
+
 
 member = [line.rstrip('\n') for line in open('ListMember.txt')]
 age = [line.rstrip('\n') for line in open('MemberAge.txt')]
+COLOR = 'A'
 
 NAME = "員工名冊系統"
 while(1):
+        
+        os.system('color '+COLOR)
         os.system('cls')  
         member = [line.rstrip('\n') for line in open('ListMember.txt')]
         age = [line.rstrip('\n') for line in open('MemberAge.txt')]
@@ -20,12 +23,12 @@ while(1):
         
         mode = input("請輸入模式 =>")        
         if mode == '1':
+                x = 0
                 #print("目前的員工有:")                
                 #print(member)                
                 #print('年齡:')
                 #print(age)
-                for item in member:
-                        x = 0
+                for item in member:                        
                         print('員工姓名:'+member[x])
                         print('年齡:'+age[x])
                         print('')
@@ -48,11 +51,12 @@ while(1):
                         fileAGE.write("%s\n" % item)
                 fileAGE.close()
         if mode == '3':
+                x = 0
                 print("員工名單及年齡:"+'\n')
                 member = [line.rstrip('\n') for line in open('ListMember.txt')]
                 age = [line.rstrip('\n') for line in open('MemberAge.txt')]
                 for item in member:
-                        x = 0
+                        
                         print('員工姓名:'+member[x])
                         print('年齡:'+age[x])
                         print('')
@@ -87,29 +91,27 @@ while(1):
                 print("員工資料已儲存")
                 file.close()
         if mode == "clear":
-                CO = input("確定要刪除所有員工的資料嗎?(y表示確定)=>")
+                CO = input("確定要刪除所有員工的資料嗎?(Y表示確定)=>")
                 if CO == 'Y':
                    file = open('ListMember.txt','w', encoding = 'UTF-8')
                    file.truncate()
                    file.close()
-                   flieAGE = open('MemberAge.txt', 'w', encoding = 'UTF-8')
+                   fileAGE= open('MemberAge.txt', 'w', encoding = 'UTF-8')
                    fileAGE.truncate()
                    fileAGE.close()
                 print("已刪除所有員工的資料")
                 
         if mode == "about":
-                print("This is made by Jay Li in May 28, 2015. I'm glad you download this stupid software")
+                print("This software is made by Jay Lee in Taiwan.")
+                print("WARNING!!!!!    This software is only for Windows, can't run at OS X or Linux.")
         if mode == "help":
                 print("模式介紹:")
                 print("save 為儲存資料到電腦裡")
                 print("exit 為離開本程式")
+                print("color 為更改字體顏色")
                 print("clear 為清除所有員工的資料\n")                
-                print("如何使用這個程式:")
-                print("如果員工姓名為Jay,年齡為12,表示方法如下:")
-                print("目前員工有:")
-                print("['Jay']")
-                print("年齡:")
-                print("['12']")      
+        if mode == 'color':
+                COLOR = input("請輸入DOS中的色彩代號(不加color)=>")               
                 
         print("   ")        
         os.system('pause')
