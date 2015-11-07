@@ -40,12 +40,12 @@ while(1):
                 age.append(AGE)
                 print("   ")                
                 print("已加入"+name+"員工"+" "+"年齡:"+AGE)
-                file = open('ListMember.txt', 'w', encoding = 'UTF-8')
+                file = open('ListMember.txt', 'w', encoding = 'Big5')
                 file.truncate() 
                 for item in member:
                         file.write("%s\n" % item)
                 file.close()
-                fileAGE = open('MemberAge.txt', 'w', encoding = 'UTF-8')
+                fileAGE = open('MemberAge.txt', 'w', encoding = 'Big5')
                 fileAGE.truncate()
                 for item in age:
                         fileAGE.write("%s\n" % item)
@@ -66,11 +66,11 @@ while(1):
                 AGE = age[x]
                 member.remove(RE)
                 age.pop(x)
-                file = open('ListMember.txt', 'w', encoding = 'UTF-8')
+                file = open('ListMember.txt', 'w', encoding = 'Big5')
                 for item in member:
                         file.write("%s\n" % item)
                 file.close()
-                fileAGE = open('MemberAge.txt', 'w', encoding = 'UTF-8')
+                fileAGE = open('MemberAge.txt', 'w', encoding = 'Big5')
                 fileAGE.truncate()
                 for item in age:
                         fileAGE.write("%s\n" % item)
@@ -85,7 +85,7 @@ while(1):
                                 file.write("%s\n" % item)
                                 """ 
         if mode == "save":
-                file = open('ListMember.txt', 'w', encoding = 'UTF-8')
+                file = open('ListMember.txt', 'w', encoding = 'Big5')
                 for item in member:
                         file.write("%s\n" % item)
                 print("員工資料已儲存")
@@ -93,10 +93,10 @@ while(1):
         if mode == "clear":
                 CO = input("確定要刪除所有員工的資料嗎?(Y表示確定)=>")
                 if CO == 'Y':
-                   file = open('ListMember.txt','w', encoding = 'UTF-8')
+                   file = open('ListMember.txt','w', encoding = 'Big5')
                    file.truncate()
                    file.close()
-                   fileAGE= open('MemberAge.txt', 'w', encoding = 'UTF-8')
+                   fileAGE= open('MemberAge.txt', 'w', encoding = 'Big5')
                    fileAGE.truncate()
                    fileAGE.close()
                 print("已刪除所有員工的資料")
