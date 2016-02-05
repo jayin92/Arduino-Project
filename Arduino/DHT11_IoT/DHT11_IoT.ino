@@ -219,7 +219,7 @@ void ServerForWebError() {
         client.println("Refresh: 1");
         client.println();
 
-        client.println("<title>Error!!!</title>");
+        client.println("<title>Error</title>");
         client.println("<h1>Sensor error.Please check the sensor</h1>");
         break;
       }

@@ -4,12 +4,10 @@ y = 0
 ans = 0
 
 while(1):
-    Match1 = []
+    os.system('cls')
+    Match1 = [3,2,4,7,6,5,1]
     Match2 = []
-    for i in range(7):
-        number1 = int(input("Please enter " + str(i)+ " number(the first one):"))
-        Match1.append(number1)
-    print(" ")    
+    
     for x in range(7):
         number2 = int(input("Please enter " + str(x)+ " number(the second one):"))
         Match2.append(number2)
