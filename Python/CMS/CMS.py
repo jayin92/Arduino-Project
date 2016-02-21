@@ -1,5 +1,5 @@
-import os
-import msvcrt as m
+import  os
+import  msvcrt  as  m
 
 
 
@@ -23,11 +23,7 @@ while(1):
         
         mode = input("請輸入模式 =>")        
         if mode == '1':
-                x = 0
-                #print("目前的員工有:")                
-                #print(member)                
-                #print('年齡:')
-                #print(age)
+                x = 0                
                 for item in member:                        
                         print('員工姓名:'+member[x])
                         print('年齡:'+age[x])
