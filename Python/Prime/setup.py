@@ -1,6 +1,6 @@
 from cx_Freeze import setup, Executable
 
-setup(name='PrimeDistinguish',
+setup(name='PrimeFinder',
       version='1.0',
-      description='Prime Distinguish',
-      executables = [Executable('PrimeDistinguish.py')])
+      description='Prime Finder',
+      executables = [Executable('PrimeFinder.py')])
