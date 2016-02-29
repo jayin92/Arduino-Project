@@ -38,7 +38,7 @@ while(1):
             file.write("%s\n" % item)
         file.close()
     if len(prime) % 100 == 0:
-        os.system('cls')
+        os.system('clear')
         print(max(prime))
         print(len(prime))
         
