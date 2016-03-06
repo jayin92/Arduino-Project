@@ -28,7 +28,6 @@ while(1):
     if confrim_number == 0:
         prime.append(number)
         number = number + 1
-       
                 
     if confrim_number == 1:
         number = number + 1
@@ -41,8 +40,7 @@ while(1):
             file.write("%s\n" % item)
         file.close()
     if len(prime) % 100 == 0:
-        os.system('cls')        
-
+        os.system('cls')
         print(max(prime))
         print(len(prime))
 
